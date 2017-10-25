@@ -1,0 +1,47 @@
+Sports
+  Football
+  Basketball
+  Volleyball
+  Tennis
+  Cricket
+  Golf
+  Rugby
+  Swimming 
+  Boxing  
+  Cycling
+  Badminton
+  import tkinter
+from tkinter import * 
+top = Tk(screenName="Bob",baseName="Bob")
+text1= Text()
+text1.config(width=15, height=1)
+
+###V1
+L1 = Label(top,text = "Ask Away")
+L1.pack (side = LEFT)
+E1 = Entry(top , bd = 5)
+E1.pack(side = RIGHT)
+top.mainloop()
+
+###V2
+###
+from tkinter import * 
+from tkinter import ttk
+root = Tk()
+root.title("Bob")
+
+### Window Size
+root.resizable(width=True, height=True)
+root.minsize(width=666 ,  height=666)
+
+### Label,entry box and button
+Label(root,text = "Ask Away").grid(row=700, sticky=W, padx=4, column=1)
+Entry(root).grid(row=700, column=15, columnspan=15, sticky=E, pady=4)
+Button(root, text="Send").grid(row=700, column=40, padx=4)
+
+Frame(root, width=700,height=500, background="white").grid(row=10, column=10, columnspan=10)
+
+
+L2=Label(root, bg="white").grid(row=0,column=0,sticky=W)
+
+
