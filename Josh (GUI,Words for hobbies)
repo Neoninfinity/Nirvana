@@ -10,13 +10,13 @@ Sports
   Boxing  
   Cycling
   Badminton
-  import tkinter
+
+###V1
+import tkinter
 from tkinter import * 
 top = Tk(screenName="Bob",baseName="Bob")
 text1= Text()
 text1.config(width=15, height=1)
-
-###V1
 L1 = Label(top,text = "Ask Away")
 L1.pack (side = LEFT)
 E1 = Entry(top , bd = 5)
