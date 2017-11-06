@@ -1,3 +1,4 @@
+########## Greeting ##########
 S = input("Press enter when you re ready to begin: ")
 sentence = s #Input
 listgreeting = ["Hi","Hello","Hey","Ahoy there matey","Greetings"]
