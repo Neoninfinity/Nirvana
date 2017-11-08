@@ -32,14 +32,3 @@ while sentence!="finish":
         OUTPUT =  def food(sentence)
         print("Suprise")
   sentence = input("Press enter when you are ready to begin: ")
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
