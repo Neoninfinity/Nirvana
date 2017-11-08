@@ -10,7 +10,7 @@ listfood = ["food","eat","hungry","resturant","fastfood","pizza","burger"...]
 
 
 ########## Greeting ##########
-s = input("Press enter when you re ready to begin: ")
+s = input("Press enter when you are ready to begin: ")
 sentence = s.lower() ###Input
 from random import randint
 random = randint(0, 4) ###choose random response 
