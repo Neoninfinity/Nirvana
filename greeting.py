@@ -5,7 +5,7 @@ sentence=0
 listgreeting = ["Hi ","Hello ","Hey ","Ahoy there matey ","Greetings "]
 listgreetques = ["how are you?","how are things?","how’s it going?","how are ye feeling today?","how do you do?"]
 ### Lists for checking input
-listfood = ["food","eat","hungry","resturant","pizza","burger","fastfood"]
+listfood = ["food","eat","hungry","restaurant","pizza","burger","fastfood"]
 listgeneral = []
 ###
 sentence = input("Press enter when you are ready to begin: ")
@@ -29,9 +29,11 @@ while sentence!="finish":
   ###Check if they are talking about food
   for i in listfood:
     if i in sentence:
-        OUTPUT =  1
+        OUTPUT =  def food(sentence)
         print("Suprise")
   sentence = input("Press enter when you are ready to begin: ")
+
+
   
   
   
