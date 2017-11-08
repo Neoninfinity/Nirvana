@@ -1,7 +1,8 @@
 ### Lists
 listgreeting = ["Hi ","Hello ","Hey ","Ahoy there matey ","Greetings "]
 listgreetques = ["how are you?","how are things?","how’s it going?","how are ye feeling today?","how do you do?"]
-listfood = ["food","eat","hungry","resturant",""]
+listgeneral = [...]
+listfood = ["food","eat","hungry","resturant","fastfood","pizza","burger"...]
 
 
 
