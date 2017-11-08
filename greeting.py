@@ -16,8 +16,7 @@ print (OUTPUT) ###just for testing
 
 ListFood = ["food","eat","hungry","resturant",""]
 for ListFood in s:
-  OUTPUT =  2
-  print("Yay")
+  OUTPUT =  def foodfunction(s)
   break
   
   
