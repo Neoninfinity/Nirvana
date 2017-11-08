@@ -15,7 +15,7 @@ print (OUTPUT) ###just for testing
 
 
 ListFood = ["food","eat","hungry","resturant",""]
-for ListFood in s
+for ListFood in s:
   OUTPUT =  def food(s)
   break
   
