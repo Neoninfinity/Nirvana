@@ -5,7 +5,7 @@ sentence=0
 listgreeting = ["Hi ","Hello ","Hey ","Ahoy there matey ","Greetings "]
 listgreetques = ["how are you?","how are things?","how’s it going?","how are ye feeling today?","how do you do?"]
 ### Lists for checking input
-listfood = ["food","eat","hungry","resturant","fastfood","pizza","burger"]
+listfood = ["food","eat","hungry","resturant","pizza","burger"]
 listgeneral = []
 ###
 sentence = input("Press enter when you are ready to begin: ")
