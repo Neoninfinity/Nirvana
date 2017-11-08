@@ -1,6 +1,6 @@
 ########## Greeting ##########
 s = input("Press enter when you re ready to begin: ")
-sentence = s ###Input
+sentence = s.lower() ###Input
 listgreeting = ["Hi ","Hello ","Hey ","Ahoy there matey ","Greetings "]
 from random import randint
 random = randint(0, 4) ###choose random response 
