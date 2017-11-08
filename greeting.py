@@ -1,9 +1,11 @@
-### Lists
+import urllib
+import json as m_json
+### List of responses
 listgreeting = ["Hi ","Hello ","Hey ","Ahoy there matey ","Greetings "]
 listgreetques = ["how are you?","how are things?","how’s it going?","how are ye feeling today?","how do you do?"]
-listgeneral = [...]
+### Lists for checking input
 listfood = ["food","eat","hungry","resturant","fastfood","pizza","burger"...]
-
+listgeneral = [...]
 
 
 
