@@ -11,6 +11,20 @@ OUTPUT = greetrandom + greetques
 print (OUTPUT) ###just for testing
 ################################# return output to screen
 
-ListFood["food","eat","hungry","resturant",""]
 
 
+
+ListFood = ["food","eat","hungry","resturant",""]
+for ListFood in s
+  OUTPUT =  def food(s)
+  break
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
