@@ -1,7 +1,6 @@
 def main(sentence):
     import urllib
     import json as m_json
-    sentence=0
 
     ### List of responses
     listgreeting = ["Hi ","Hello ","Hey ","Ahoy there matey ","Greetings "]
@@ -13,24 +12,15 @@ def main(sentence):
 
     ###
     ##sentence = input("Press enter when you are ready to begin: ")
-    while sentence!="finish":
-      sentence = str(sentence)  
+    while sentence!="finish":  
       ########## Greeting ##########
-      print(sentence)
       sentence = sentence.lower() ###Input
       from random import randint
-      random = randint(0, 4) ###choose random response 
       greetrandom = listgreeting[randint(0, len(listgreeting)-1)]
       greetques = listgreetques[randint(0, len(listgreetques)-1)]
-      OUTPUT = greetrandom + greetques
-
+      OUTPUT = greetrandom + greetques  
+      if sentence == ("how are you?"):
+            OUTPUT = "I'm good thanks!"
       ### OUTPUT THE FINAL RESPONSE
       return (OUTPUT)
       sentence = input("Press enter when you are ready to begin: ")
-  
-  
-  
-  
-  
-  
-  
