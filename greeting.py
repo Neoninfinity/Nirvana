@@ -1,6 +1,5 @@
 import urllib
 import json as m_json
-sentence=0
 
 ### List of responses
 listgreeting = ["Hi ","Hello ","Hey ","Ahoy there matey ","Greetings "]
