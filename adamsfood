@@ -1,0 +1,18 @@
+#foodKeyword = open(/Keywords/foodkeywords.txt)
+#if foodKeyword in sentence:
+    #food(sentence)
+#import urllib
+#import json as m_json
+from googleapi import search
+
+def food(s):
+    keyword  = ["food", "restaurant", "fastfood", "takeaway", "italian", "chinese", "indian", "pizza", "fish", "chips", "burger", "steak", "sandwich", "coffee", "mexican", "pub"]
+    if ("restaurant" or "takeaway" or "food" or "fastfood") in s:
+        foodType = input("What type of food? ")
+        for url in search("foodType", tld='eng', lang='eng', stop=10):
+            return url
+        
+    else:
+        print(" ")
+
+print(food("i want a restaurant"))
