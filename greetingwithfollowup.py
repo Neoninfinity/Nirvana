@@ -10,12 +10,8 @@ def greetingwithfollowup(sentence):
     ########## Greeting ##########
     from random import randint
     greetrandom = listgreeting[randint(0, len(listgreeting)-1)]
-    
-    
-    
-    
-    
+    response = listresponses[randint(0, len(listresponses)-1)]    
     greetques = listgreetques[randint(0, len(listgreetques)-1)]
-    OUTPUT = greetrandom + greetques
+    OUTPUT = greetrandom + response + greetques
     ### OUTPUT THE FINAL RESPONSE
     return (OUTPUT)
