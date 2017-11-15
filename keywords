@@ -1,6 +1,7 @@
 #-----Lore-----
-#-----1: Hello greetings-----
-
+#-----1: Hello greetings/How are you-----
+#-----2: Food------
+#-----3:
 key = key = {'ahoy': 1, 'chinese': 2, 'dinner': 2, 'greeting': 1, 'pizza': 2, 'indian': 2, 'burger': 2,
 'hi': 1, 'italian': 2, 'takeaway': 2, 'hello': 1, 'fish': 2, 'chips': 2, 'steak': 2, 'hey': 1
 , 'food': 2, 'restaurant': 2, 'lunch': 2}
