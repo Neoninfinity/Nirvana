@@ -1,6 +1,6 @@
 import urllib
 import json as m_json
-
+##########################################################################################
 ### List of responses
 listgreeting = ["Hi ","Hello ","Hey ","Ahoy there matey ","Greetings "]
 listgreetques = ["how are you?","how are things?","how’s it going?","how are ye feeling today?","how do you do?"]
@@ -9,7 +9,7 @@ listgreetques = ["how are you?","how are things?","how’s it going?","how are y
 listfood = ["food","eat","hungry","restaurant","pizza","burger","fastfood"]
 listgeneral = []
 
-###
+################################################################################################################
 sentence = input("Press enter when you are ready to begin: ")
 while sentence!="finish":
 
@@ -23,9 +23,14 @@ while sentence!="finish":
   print (OUTPUT) ###just for testing
   ################################# return output to screen
 
-  ###Check if they are talking about food
+  ##################################################################################################Check if they are talking about food
   for i in listfood:
     if i in sentence:
         OUTPUT =  def food(sentence)
         print("Suprise")
   sentence = input("Press enter when you are ready to begin: ")
+################################################################################################################
+
+##########
+
+
