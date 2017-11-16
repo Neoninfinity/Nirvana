@@ -14,7 +14,27 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    ###################################
+    #####################################
+    #
+    if message.content.startswith('!test'):
+        counter = 0
+        tmp = await client.send_message(message.channel, 'Calculating messages...')
+        async for log in client.logs_from(message.channel, limit=100):
+            if log.author == message.author:
+                counter += 1
+
+        await client.edit_message(tmp, 'You have {} messages.'.format(counter))
+    elif message.content.startswith('!sleep'):
+        await asyncio.sleep(5)
+        await client.send_message(message.channel, 'Done sleeping')
+        return 0
+    elif message.content.startswith('!introduce'):
+        await client.send_message(message.channel, "Hi I'm Nirvana a handy assistant\nI'm going to be the best bot around!!")
+        return 0
+    else:
+        print("No response for select input")
+    
+    #########################################MAIN NIRVANA CODE
     sentence = message.content
     brokenString = sentence.split()
     #print(("author is",type(message.author.id),message.content))
@@ -34,25 +54,8 @@ async def on_message(message):
         else:
             print("Function not found")
     elif message.author.id == ("375255240326250496"):
-       #print(message.author)
+        print(message.author)
     else:  
-        tmp = await client.send_message(message.channel, "Sorry, I couldn't understand you") 
-        
-
-    #####################################
-    #
-    if message.content.startswith('!test'):
-        counter = 0
-        tmp = await client.send_message(message.channel, 'Calculating messages...')
-        async for log in client.logs_from(message.channel, limit=100):
-            if log.author == message.author:
-                counter += 1
-
-        await client.edit_message(tmp, 'You have {} messages.'.format(counter))
-    elif message.content.startswith('!sleep'):
-        await asyncio.sleep(5)
-        await client.send_message(message.channel, 'Done sleeping')
-    else:
-        print("No response for select input")
+        tmp = await client.send_message(message.channel, "Sorry, I couldn't understand you")
 
 client.run('Mzc1MjU1MjQwMzI2MjUwNDk2.DO23Qg.TAlBUyCq5MyE7UMH4hSLZz1WP-E')
