@@ -4,7 +4,7 @@ def greetingwithfollowup(sentence):
 
     ### List of responses
     listgreeting = ["Hi ","Hello ","Hey ","Greetings "]
-    listgreetques = ["\nhow are you?","\nhow are things?","\nhow’s it going?","\nhow do you do?"]
+    listgreetques = ["\nHow are you?","\nHow are things?","\nHow’s it going?","\nHow do you do?"]
     listresponses = ["\nI am doing well","\nI feel nothing","\nmeh"]
     
     ########## Greeting ##########
