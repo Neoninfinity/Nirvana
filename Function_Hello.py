@@ -44,13 +44,13 @@ def responses(sentence):
     sentence = ''.join(c for c in sentence if c not in punctuation)
     ###-----------###   
     
-    listofAnswers = ["its going well","good","doing well","fine","im good","i am good","very well","not bad","going well","hanging in there","and you"]
+    listofAnswers = ["its going well","good","doing well","fine","im good","i am good","very well","not bad","going well","im alright","alright","hanging in there","and you"]
     listofResponses = ["Good to hear \nHow can i help you?","I'm doing well \nHow can i help you?"]
     for i in listofAnswers:
         if i in sentence:
-            if (listofAnswers.index(i)<=9):
+            if (listofAnswers.index(i)<=11):
                 OUTPUT = listofResponses[0]
-            elif (listofAnswers.index(i)==10):
+            elif (listofAnswers.index(i)==12):
                 OUTPUT = listofResponses[1]
             return OUTPUT
     
