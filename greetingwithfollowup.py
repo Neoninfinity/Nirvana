@@ -1,17 +1,9 @@
-def greetingwithfollowup(sentence):
-    import urllib
-    import json as m_json
-
-    ### List of responses
-    listgreeting = ["Hi ","Hello ","Hey ","Greetings "]
-    listgreetques = ["\nhow are you?","\nhow are things?","\nhow’s it going?","\nhow do you do?"]
-    listresponses = ["\nI am doing well","\nI feel nothing","\nmeh"]
-    
-    ########## Greeting ##########
+def reponseToHowAreYou(sentence):
+    #This function
     from random import randint
-    greetrandom = listgreeting[randint(0, len(listgreeting)-1)]
-    response = listresponses[randint(0, len(listresponses)-1)]    
-    greetques = listgreetques[randint(0, len(listgreetques)-1)]
-    OUTPUT = greetrandom + response + greetques
-    ### OUTPUT THE FINAL RESPONSE
+    listresponses = ["I am doing well","Good","Fine","Pretty good"]
+    listresponsesadd = ["\nHow can i help you?","\nHow may i be of assistance","\nWhat can i help you with?"]
+    response = listresponses[randint(0, len(listresponses)-1)]   
+    responseadd = listresponsesadd[randint(0, len(listresponsesadd)-1)] 
+    OUTPUT = response + responseadd
     return (OUTPUT)
