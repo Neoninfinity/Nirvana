@@ -1,9 +1,11 @@
-#-----Lore-----
-#-----1: Hello greetings/How are you-----
-#-----2: Food------
-#-----3:
-key = {'chinese': 2, 'dinner': 2, 'greeting': 1, 'pizza': 2, 'indian': 2, 'burger': 2,
-'hi': 1, 'italian': 2, 'takeaway': 2, 'hello': 1, 'fish': 2, 'chips': 2, 'steak': 2, 'hey': 1
-, 'food': 2, 'restaurant': 2, 'lunch': 2}
+#-----1: function_Hello.py/hello-----
+#-----3: Google search-----
+#-----5: function_Hello.py/reponseToHowAreYou-----
+#-----6: function_Hello.py/goodbye-----
+#-----7: function_Hello.py/random-----
+#-----8: function_Hello.py/responses-----
 
-}
+key = {'hanging in there': 8, 'cya': 6, 'search': 3, 'how are things?': 5, 'goodbye': 6, 'and you': 8,"and you?":8, 'bye': 6, 'hello': 1, "i'm good": 8, 'hi': 1, 'cheerio': 6,
+       'not bad': 8,'doing well': 8, 'going well': 8, 'how do you do?': 5, 'see you later': 6, 'how old are you?': 7, 'closest': 4, "how's it going?": 5, 'i am good': 8,
+       'im good':8, 'hey': 1, 'very well': 8, 'greetings': 1,'good': 8 , 'fine': 8, 'adios': 6, 'what is your name?': 7, 'google': 3, 'what is your favourite colour?': 7,
+       'from': 4, 'how are you?': 5,"its going well":8,'yo':1,'what can you do?':7,'how can you help me?':7  }
