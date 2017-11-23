@@ -1,2 +1,0 @@
-def generalconv(sentence):
-  
