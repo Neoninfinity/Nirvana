@@ -1,4 +1,4 @@
-#I had the majority of these functions directly on the server.
+#I made the majority of these functions directly on the server.
 
 def hello(sentence):
     #This function returns a greeting and a question, they are both randomly selected from the following lists.
