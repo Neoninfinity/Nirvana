@@ -1,19 +1,18 @@
 #Imports all neccessary libraries
-import discord
-import asyncio
-import sys
-from function_Hello import hello,Hellowithfollowup,goodbye,random
+import discord #The discord api wrapper for python https://github.com/Rapptz/discord.py 
+import asyncio # Python3.4 library multiplexing over sockets and waiting for co-routines to finish. Doing this can requerst data from multiple servers and act only when needed
+import sys 
+from function_Hello import hello,reponseToHowAreYou,goodbye,random,responses
 from keywords import key
 from GoogleSearch import gsearch #Library from google API https://github.com/google/google-api-python-client
-from googleplaces import GooglePlaces, types, lang
-from picturesearch import place
+from picturesearch import place # Google place library
 keywords = key
 # defines the client
 client = discord.Client()
 
 """Takes in a string and checks to see if its a valid integer"""
 def is_number(s):
-    if s.isdigit() == True:
+    if s.isdigit() == True: # isdigit is a function from the standard library
         return True
     else:
         return False
@@ -75,7 +74,7 @@ def closestPlace(message,value):
         
     intv = 1
     if not wordlist:
-        OUTPUT = "Oops something didn't go right\nTo google search format like this: '!psearch [current location] [destination]'"
+        OUTPUT = "Oops something didn't go right\nTo place search format like this: '!psearch [current location] [destination]'"
         return OUTPUT
 
     listneeded = place(wordlist[2],wordlist[0])
@@ -89,20 +88,16 @@ def closestPlace(message,value):
 async def on_message(message):
     #####################################
     
-    
-    if message.content.startswith('!test'): # checks if a message starts with a specific function
+    ##### Test Function from discord library
+    if message.content.startswith('!test'): # checks if a message starts with a specific string
         counter = 0
         tmp = await client.send_message(message.channel, 'Calculating messages...')
         async for log in client.logs_from(message.channel, limit=100):
             if log.author == message.author:
                 counter += 1
         await client.edit_message(tmp, 'You have {} messages.'.format(counter))
-        
+    ####function end 
     elif message.author.id == ("375255240326250496"): # This is the ID of the bot
-        return 0
-    elif message.content.startswith('!sleep'): 
-        await asyncio.sleep(5)
-        await client.send_message(message.channel, 'Done sleeping')
         return 0
     elif message.content.startswith('!gsearch'): ## if starts with !gsearch
         OUTPUT = googlesearch(message,"")
@@ -112,7 +107,7 @@ async def on_message(message):
         tmp = await client.send_message(message.channel, "Shutting down, Goodbye!")
         sys.exit()
         
-    elif message.content.startswith('!stweet'):
+    elif message.content.startswith('!stweet'):#function not implemented
         OUTPUT = TwitSearch()
         tmp = await client.send_message(message.channel, OUTPUT)
         return 0
@@ -142,9 +137,12 @@ async def on_message(message):
                 break
             else:
                 print("")
-        
+
         print("funcload is ", funcLoad)
 
+        #Depending on the keyword the different number function will be loaded 
+        #The numbers are listed in the keywords.py
+        
         if funcLoad == 1:
             OUTPUT = hello(sentence)
             tmp = await client.send_message(message.channel, OUTPUT)
@@ -159,13 +157,16 @@ async def on_message(message):
             OUTPUT = closestPlace(message,keyword)
             tmp = await client.send_message(message.channel, OUTPUT)
         elif funcLoad == 5: 
-            OUTPUT = Hellowithfollowup(sentence)
+            OUTPUT = reponseToHowAreYou(sentence)
             tmp = await client.send_message(message.channel, OUTPUT)
         elif funcLoad == 6: 
             OUTPUT = goodbye(sentence)
             tmp = await client.send_message(message.channel, OUTPUT)
         elif funcLoad == 7: 
             OUTPUT = random(sentence)
+            tmp = await client.send_message(message.channel, OUTPUT)
+        elif funcLoad == 8: 
+            OUTPUT = responses(sentence)
             tmp = await client.send_message(message.channel, OUTPUT)
         else:
             print("Function not found")
