@@ -20,7 +20,7 @@ def reponseToHowAreYou(sentence):
     #This function selects two random strings from the following lists and the merges them.Then retuns the string.
     from random import randint
     listresponses = ["I am doing well","Good","Fine","Pretty good"]
-    listresponsesadd = ["\nHow can i help you?","\nHow may i be of assistance","\nWhat can i help you with?"]
+    listresponsesadd = ["\nHow can I help you?","\nHow may I be of assistance","\nWhat can I help you with?"]
     response = listresponses[randint(0, len(listresponses)-1)]   
     responseadd = listresponsesadd[randint(0, len(listresponsesadd)-1)] 
     OUTPUT = response + responseadd
