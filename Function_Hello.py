@@ -45,7 +45,7 @@ def responses(sentence):
     ###-----------###   
     
     listofAnswers = ["its going well","good","doing well","fine","im good","i am good","very well","not bad","going well","im alright","alright","hanging in there","and you"]
-    listofResponses = ["Good to hear \nHow can i help you?","I'm doing well \nHow can i help you?"]
+    listofResponses = ["Good to hear \nHow can I help you?","I'm doing well \nHow can I help you?"]
     for i in listofAnswers:
         if i in sentence:
             if (listofAnswers.index(i)<=11):
