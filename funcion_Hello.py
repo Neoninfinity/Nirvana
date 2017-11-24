@@ -29,7 +29,7 @@ def reponseToHowAreYou(sentence):
 def random(sentence):   
     #This function answers one of the questions in the following list with a response from the second list and then retuns the response.
     listRandomQuestions = ["what is your name?","what is your favourite colour?","how old are you?","what can you do?","how can you help me?"]
-    listRandomResponses = ["My name is Nirvana","My favourite colour is blue","I am 1 week old","I can count calories of foods you have eaten.\n I can google stuff for you.","I can count calories of foods you have eaten.\n I can google stuff for you."]
+    listRandomResponses = ["My name is Nirvana","My favourite colour is blue","I am 1 week old","I can count calories of foods you have eaten.\n I can search the internet for you.","I can count calories of foods you have eaten.\n I can google stuff for you."]
     for i in listRandomQuestions:
         if i in sentence:
             num = listRandomQuestions.index(i)
@@ -39,18 +39,18 @@ def random(sentence):
 def responses(sentence):
     #This function returns response sepending on what the user has inputed and then returns the response
     
-    ###Not my code###
+    ###Not my code###https://www.quora.com/How-do-I-remove-punctuation-from-a-Python-string
     from string import punctuation
     sentence = ''.join(c for c in sentence if c not in punctuation)
     ###-----------###   
     
-    listofAnswers = ["its going well","good","doing well","fine","im good","i am good","very well","not bad","going well","hanging in there","and you"]
+    listofAnswers = ["its going well","good","doing well","fine","im good","i am good","very well","not bad","going well","im alright","alright","hanging in there","and you"]
     listofResponses = ["Good to hear \nHow can i help you?","I'm doing well \nHow can i help you?"]
     for i in listofAnswers:
         if i in sentence:
-            if (listofAnswers.index(i)<=9):
+            if (listofAnswers.index(i)<=11):
                 OUTPUT = listofResponses[0]
-            elif (listofAnswers.index(i)==10):
+            elif (listofAnswers.index(i)==12):
                 OUTPUT = listofResponses[1]
             return OUTPUT
     
