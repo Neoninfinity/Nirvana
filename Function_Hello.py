@@ -29,7 +29,7 @@ def reponseToHowAreYou(sentence):
 def random(sentence):   
     #This function answers one of the questions in the following list with a response from the second list and then retuns the response.
     listRandomQuestions = ["what is your name?","what is your favourite colour?","how old are you?","what can you do?","how can you help me?"]
-    listRandomResponses = ["My name is Nirvana","My favourite colour is blue","I am 1 week old","I can count calories of foods you have eaten.\n I can google stuff for you.","I can count calories of foods you have eaten.\n I can google stuff for you."]
+    listRandomResponses = ["My name is Nirvana","My favourite colour is blue","I am 1 week old","I can count calories of foods you have eaten.\n I can search the internet for you.","I can count calories of foods you have eaten.\n I can google stuff for you."]
     for i in listRandomQuestions:
         if i in sentence:
             num = listRandomQuestions.index(i)
