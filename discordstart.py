@@ -6,25 +6,54 @@ from function_Hello import hello,reponseToHowAreYou,goodbye,random,responses
 from keywords import key
 from GoogleSearch import gsearch #Library from google API https://github.com/google/google-api-python-client
 from picturesearch import place # Google place library
+from Nutrition import *
 keywords = key
 # defines the client
 client = discord.Client()
 
-"""Takes in a string and checks to see if its a valid integer"""
-def is_number(s):
-    if s.isdigit() == True: # isdigit is a function from the standard library
-        return True
-    else:
-        return False
+
+
 
 """This coroutine waits until the client is all ready then prints to console"""
 @client.event
-async def on_ready():
+async def on_ready():#Ready from the discord Library
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
     print('------')
 
+    
+    
+# Functions that could compose of a library
+def is_number(s):
+    """Takes in a string and checks to see if its a valid integer"""
+    if s.isdigit() == True: # isdigit is a function from the standard library
+        return True
+    else:
+        return False
+    
+def messageSend(string,channel):
+    tmp = await(client.send_message(channel, string))
+
+def CreateServer(server_Name,Key,add):
+    fileName = server_Name + ".py"
+    f = open(fileName,"w")
+    f.write("import discord\n\
+             import asyncio \n\
+             import sys\n"
+             "client.run("+Key+")\n"
+             )
+    if add == "search":
+        f.write("from diserv import googlesearch\n\
+        use googlesearch() to search google")
+    elif add == "places":
+         f.write("from diserv import closestPlace\n\
+        use closestPlace(place,x) to find the closest place from x")
+            
+    f.close()
+        
+    
+    
 #Functions are put in here
 
 """Takes in a message and removes commands then searches query with results of n"""
@@ -115,6 +144,22 @@ async def on_message(message):
     elif message.content.startswith('!introduce'):
         await client.send_message(message.channel, "Hi I'm Nirvana a handy assistant\nI'm going to be the best bot around!!")
         return 0
+    elif message.content.startswith('!calorie'):
+        msg = (message.content).replace('!calorie', '')
+        OUTPUT = Calorie(msg)
+        msg1 = "You have consumed " + str(OUTPUT[0]) +" calories"+ "\nwhich is " + str(OUTPUT[1]) +"% of your daily allowance!"
+        await client.send_message(message.channel, msg1)
+        return 0
+    elif message.content.startswith('!fat'):
+        msg = (message.content).replace('!fat', '')
+        OUTPUT = Fat(msg)
+        await client.send_message(message.channel, OUTPUT)
+        return 0
+    elif message.content.startswith('!sugar'):
+        msg = (message.content).replace('!sugar', '')
+        OUTPUT = Sugar(msg)
+        await client.send_message(message.channel, OUTPUT)
+        return 0
     else:
         print("No response for select input")
     
@@ -126,17 +171,28 @@ async def on_message(message):
     if (len(set(brokenString).intersection(keywords))) > 0 or sentence in keywords.keys():
         ## Keyword checking goes here (if statements)
         funcLoad = 0
-        
+        newstring = sentence
         for x in brokenString:
             if x in keywords.keys():
-                print(x)
                 keyword = x
+                newstring = newstring.replace(keyword,"")
+                print(x,newstring)
                 funcLoad = keywords[x]
             elif sentence in keywords.keys():
                 funcLoad = keywords[sentence]
                 break
             else:
                 print("")
+                
+        has_key = lambda a, d: any(k in a for k in d) # https://stackoverflow.com/questions/32096654/python-check-if-string-contains-dictionary-key
+        newbrok = newstring.split()
+        if has_key(newstring,keywords) == True:
+            print("loaded")
+            for key in keywords:
+                if key in newstring and len(key) > 3:
+                    print(key)
+                    funcLoad= keywords[key]
+                 
 
         print("funcload is ", funcLoad)
 
@@ -158,7 +214,7 @@ async def on_message(message):
             tmp = await client.send_message(message.channel, OUTPUT)
         elif funcLoad == 5: 
             OUTPUT = reponseToHowAreYou(sentence)
-            tmp = await client.send_message(message.channel, OUTPUT)
+            tmp = await client.send_message(message.channel, OUTPUT) # 
         elif funcLoad == 6: 
             OUTPUT = goodbye(sentence)
             tmp = await client.send_message(message.channel, OUTPUT)
