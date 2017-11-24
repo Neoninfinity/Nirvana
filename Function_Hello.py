@@ -39,7 +39,7 @@ def random(sentence):
 def responses(sentence):
     #This function returns response sepending on what the user has inputed and then returns the response
     
-    ###Not my code###
+    ###Not my code###https://www.quora.com/How-do-I-remove-punctuation-from-a-Python-string
     from string import punctuation
     sentence = ''.join(c for c in sentence if c not in punctuation)
     ###-----------###   
